@@ -6,16 +6,16 @@ import './Items.css';
 
 
 const Items = props => {
-    const [userItems, setUserItems] = useState();
+    const [userItems, setUserItems] = useState([]);
 
     const onAddItemHandler = item => {
-        // setUserItems(prevItems => [
-        //     ...prevItems, { item }
-        // ]);
+        setUserItems(prevItems => {
+            return [
+                ...prevItems, item
+            ]
+        }
+        );
         console.log("item: ⚡", item);
-        console.log("text: 👌", item.text);
-        console.log("total: 🚀", item.total);
-        setUserItems(item);
     }
 
     return (

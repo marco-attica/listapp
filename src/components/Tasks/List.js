@@ -1,11 +1,21 @@
 import React from 'react';
+import './List.css';
 
 const List = props => {
-    console.log("Object✌: ", props.items);
+    console.log("✌: ", props.items);
     return (
         <section className="tasks-list">
-            {/* <span>{props.items.text}</span> */}
-        </section>
+            {props.items.map((item) => {
+                // console.log('🚀', item);
+                // console.log('👌', index);
+                return (
+                    <React.Fragment>
+                        <span>{item.text}</span>
+                        <span>{item.total}</span><br />
+                    </React.Fragment>
+                )
+            })}
+        </section >
     );
 };
 
