@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Items from './components/Tasks/Items'
-import List from './components/Tasks/List';
+import Items from './components/Tasks/Items';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
